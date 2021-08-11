@@ -8,7 +8,6 @@ Then, the output should be:40320
 """
 
 # El numero factorial de X es el producto de todos los int positivos menores o iguales a X
-
 # El usuario podrá escoger qué numero quiere factorizar
 n = int(input()) #input() function takes input as string type
                 #int() converts it to integer type
