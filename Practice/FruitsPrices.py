@@ -5,9 +5,6 @@ lista_precios_kg = {
     "Sandia":1.7,
 }
 
-
-
-
 # Funcion para devolver la lista en string (Visualmente mejor en la consola después)     
 def listToString(fruta_disponible): 
     str1 = " " 
@@ -24,4 +21,4 @@ if fruta in lista_precios_kg:
     kilos = float(input(f"¿Cuantos kilos de {fruta} quieres?")) # Le preguntamos cuantos Kg quiere
     print(f"{kilos}Kg de {fruta} valen a {lista_precios_kg[fruta]*kilos} $ ") # il importe queda calculadd y se muestra por pantalla
 else:
-    print(f"{fruta} no se encuentra disponible") # En caso de error saldrá que no esta disponible.
+    print(f"{fruta} no se encuentra disponible") # En caso de error saldrá que no esta disponible
