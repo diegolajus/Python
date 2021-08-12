@@ -4,9 +4,6 @@ t.setup (500,500)
 t.shape("turtle")
 t.color("red")
 
-
-
-
 #   def rectangulo (px, py, ancho, alto)
 # t.seth donde apuntara despues de moverse (0 es derecha)(90 es arriba)(180 es izquierda) (360 es abajo)
 # t.circle dibuja un circulo
@@ -22,9 +19,7 @@ def ordenar():
     elif orden == "e":  t.bye()
     else: return              
     
-    
     t.forward(50)
-
 
 while True:
     ordenar()
