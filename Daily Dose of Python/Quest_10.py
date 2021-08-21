@@ -8,16 +8,15 @@ again and hello makes perfect practice world
 
 """
 
-# Pedimos palabras separadas por comas
+# Pedimos input para que introduzca texto
 x = input()
-# Recorre el input anterior y separa cada palabra con espacios introducidos 
-# Y guardarlo como list
+# Recorre el input anterior y separa cada palabra introducida
 y = [i for i in x.split(" ")]
-
 # mostramos en pantalla la lista con:
     # sort() (ordenada alfabeticamente)
     # set() (devuelve elemento iterable sin repetir)
 print((sorted(set(y))))
-# faltaba volver a juntar los elementos de la lista para que se vean como un texto
+# faltaba volver a juntar los elementos de la 
+# lista con espacios para que se vean como un texto.
 print(" ".join(y))
 
