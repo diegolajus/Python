@@ -17,8 +17,9 @@ for i in binaries:
         print(f"{i} is not a binary number")
     else:
         # si el contenido recorrido se divide entre 5 y el resto es 0 muéstralo por consola
-        if int(i,2) %5 == 0:
+        if int(i,2) %5 == 0: #Convertimos "i" en un integer de base 2 (binario)
             print(i)
+
         
 
         
