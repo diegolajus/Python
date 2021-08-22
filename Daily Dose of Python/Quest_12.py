@@ -11,8 +11,8 @@ comma-separated sequence on a single line.
 only_even = []
 #Recorremos el rango
 for item in range(1000,3001):
-    #Convertimos los numeros del rango recorrido en str
-    # para poder iterar cada caracter del numero
+    # Convertimos los numeros del rango recorrido en str
+    # para evitar 'int' object is not subscriptable (no se puede acceder a un numero como si fuera un diccionario,lista, string...)
     e = str(item)
     # al convertir cada caracter de nuevo en integer
     # y ver que son pares...
