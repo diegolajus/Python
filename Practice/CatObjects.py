@@ -5,7 +5,6 @@ class Cat:
         self.name = name
         self.age = age
         
-
 # 1 Instantiate the Cat object with 3 cats
 cat1 = Cat("Spark",2) 
 cat2 = Cat("Mike",9) 
