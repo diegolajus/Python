@@ -4,11 +4,13 @@ class Cat:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+        
 
 # 1 Instantiate the Cat object with 3 cats
 cat1 = Cat("Spark",2) 
 cat2 = Cat("Mike",9) 
 cat3 = Cat("Toby",3) 
+
 
 # 2 Create a function that finds the oldest cat
 max_age = max(cat1.age,cat2.age,cat3.age)
