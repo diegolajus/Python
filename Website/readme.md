@@ -1,6 +1,9 @@
+
 ### SAVING FORM DATA INTO A CSV FILE
-### IT DOESN'T MAKE A LOT OF SENSE BCS WE ARE GOING TO UPLOAD THE CSV AS A WEB FILE AND WE HAVE NO ACCESS TO IT WHEN IT IS DEPLOYED
-### WE CAN USE PYTHONANYWHERE THAT ALLOOWS TO HOST A SITE HAVING ACCES TO ALL FILES WHILE IT'S DEPLOYED SO YOU'D BE ABLE TO SEE DATA RETURNED FROM FORM
+
+It doesn't make a lot of sense bcs we are going to upload the csv among the web files and won't have access to csv when project is deployed
+
+We can use PythonAnywhere that allows to host a site having access to all files while it's deployed so you'd be able to see data returned from form in csv file
 
 ```py
 def write_to_csv(data):
@@ -13,7 +16,26 @@ def write_to_csv(data):
         csv_writer.writerow([email,subject,message])
 ```
 
-### I PREFER TO SEND FORM DATA INTO AN EXISTING EXCEL FILE FROM GOOGLE DRIVE, THIS WAY JUST NEED TO OPEN EXCEL FILE TO SEE IF THERE'S NEW DATA
+___
+
+### SAVING FORM DATA INTO GOOGLE DRIVE
+
+I prefer to send Form data into an existing excel file from Google Drive, this way just need to open Excel file to see if there's new data.
+
+- Form tag id -> #sheedtb-form
+
+- Form method = 'POST'
+
+- Form action="WRITE_HERE_YOUR_GOOGLE_DRIVE_EXCEL_URL" 
+
+
+```HTML
+<form id="sheedtb-form" method="POST" action="WRITE_HERE_YOUR_GOOGLE_DRIVE_EXCEL_URL">
+
+    ...
+    
+</form>
+```
 
 ```JS
 
@@ -30,9 +52,16 @@ def write_to_csv(data):
     }).then(
         response => response.json()
     ).then((html) => {
-      // you can put any JS code here
+      // you can put any JS code here, this case is returning Thankyou Page
       location.href='./thankyou.html'
     });
   });
 
+```
+
+Don't forget imports (I do always forget)
+
+```py
+from flask import Flask, render_template, url_for, request, redirect
+import csv
 ```
