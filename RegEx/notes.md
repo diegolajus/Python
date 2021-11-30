@@ -41,3 +41,5 @@ x = re.split("\s", txt, 1)
 print(x) 
 # Output: ['The', 'rain in Spain']
 ```
+
+<!-- https://gist.github.com/rakeshsukla53/deb7e80cd2d0a0752fa1 -->
