@@ -13,6 +13,7 @@ patt = re.compile(r".+\.")
 ex_1 = patt.findall(ex1)
 print(ex_1)
 
+# 2
 
 # MATCH TEXT can ✔
 # MATCH TEXT man ✔
