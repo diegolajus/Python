@@ -28,4 +28,17 @@ ex_2 = patt.findall(ex2)
 print(ex_2)
 
 
-# [cmf] -> it will only find the words starting from c, m, f. can, man and fan will match here
+
+# 3
+
+# MATCH TEXT hot ✔
+# MATCH TEXT dog ✔
+# SKIP TEXT bog  ✖
+
+ex3="hot dog bog"
+patt = re.compile(r"[hd]an")
+ex_3 = patt.findall(ex3)
+print(ex_3)
+
+
+
