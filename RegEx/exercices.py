@@ -27,8 +27,6 @@ patt = re.compile(r"[cmf]an")
 ex_2 = patt.findall(ex2)
 print(ex_2)
 
-
-
 # 3
 
 # MATCH TEXT hot ✔
@@ -39,6 +37,20 @@ ex3="hot dog bog"
 patt = re.compile(r"[hd]an")
 ex_3 = patt.findall(ex3)
 print(ex_3)
+
+# 4
+
+# MATCH TEXT ✓
+# MATCH TEXT ✓
+# SKIP TEXT	✓
+# SKIP TEXT	✖
+# SKIP TEXT	✖
+
+ex4="hot dog bog"
+patt = re.compile(r"^a-z")
+ex_4 = patt.findall(ex4)
+print(ex_4)
+
 
 
 
