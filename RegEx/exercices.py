@@ -34,22 +34,21 @@ print(ex_2)
 # SKIP TEXT bog  ✖
 
 ex3="hot dog bog"
-patt = re.compile(r"[hd]an")
+patt = re.compile(r"[hd]")
 ex_3 = patt.findall(ex3)
 print(ex_3)
 
 # 4
 
-# MATCH TEXT ✓
-# MATCH TEXT ✓
-# SKIP TEXT	✓
-# SKIP TEXT	✖
-# SKIP TEXT	✖
+# MATCH TEXT 	wazzzzup 	 ✓
+# MATCH TEXT 	wazzzup 	 ✓
+# MATCH TEXT 	wazup 		 ✓
 
-ex4="hot dog bog"
-patt = re.compile(r"^a-z")
+ex4="wazup wazzzup wazzzzup"
+patt = re.compile(r"waz{1,4}up")
 ex_4 = patt.findall(ex4)
 print(ex_4)
+
 
 
 
