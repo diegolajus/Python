@@ -49,7 +49,17 @@ patt = re.compile(r"waz{1,4}up")
 ex_4 = patt.findall(ex4)
 print(ex_4)
 
+# 5
 
+# MATCH TEXT 	1. abc 		✓
+# MATCH TEXT 	2. abc 		✓
+# MATCH TEXT 	3. abc 		✓
+# SKIP TEXT 	4.abc       ✖
+
+ex5="1. abc 2. abc 3. abc 4.abc"
+patt = re.compile(r"\d\.\s+abc")
+ex_5 = patt.findall(ex5)
+print(ex_5)
 
 
 
