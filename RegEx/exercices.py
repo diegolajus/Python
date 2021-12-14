@@ -11,7 +11,7 @@ from typing import Text
 ex1="cat. 896. ?=+. abc1"
 patt = re.compile(r".+\.")
 ex_1 = patt.findall(ex1)
-print(ex_1)
+print("Ex1 -->",ex_1)
 
 # 2
 
@@ -25,7 +25,7 @@ print(ex_1)
 ex2="can man fan dan ran pan"
 patt = re.compile(r"[cmf]an")
 ex_2 = patt.findall(ex2)
-print(ex_2)
+print("Ex2 -->",ex_2)
 
 # 3
 
@@ -36,7 +36,7 @@ print(ex_2)
 ex3="hot dog bog"
 patt = re.compile(r"[hd]")
 ex_3 = patt.findall(ex3)
-print(ex_3)
+print("Ex3 -->",ex_3)
 
 # 4
 
@@ -47,7 +47,7 @@ print(ex_3)
 ex4="wazup wazzzup wazzzzup"
 patt = re.compile(r"waz{1,4}up")
 ex_4 = patt.findall(ex4)
-print(ex_4)
+print("Ex4 -->",ex_4)
 
 # 5
 
@@ -59,7 +59,7 @@ print(ex_4)
 ex5="1. abc 2. abc 3. abc 4.abc"
 patt = re.compile(r"\d\.\s+abc")
 ex_5 = patt.findall(ex5)
-print(ex_5)
+print("Ex5 -->",ex_5)
 
 # 6 Write a Python program that matches a string that has an a followed by one or more b's.
 
@@ -70,12 +70,12 @@ def text_match(text):
         else:
                 return('Not matched!')
 
-print(text_match("ab"))
-print(text_match("abc"))
-print(text_match("aBc"))
+print("Ex6 i) -->",text_match("ab"))
+print("Ex6 ii)-->",text_match("abc"))
+print("Ex6 iii)-->",text_match("aBc"))
 
 
-# 6 Write a Python program that matches a string that has an a followed by zero or more b's.
+# 7 Write a Python program that matches a string that has an a followed by zero or more b's.
 
 def text_match(text):
         patterns = 'ab+?'
@@ -84,7 +84,16 @@ def text_match(text):
         else:
                 return('Not matched!')
 
-print(text_match("ab"))
-print(text_match("abc"))
-print(text_match("aBc"))
+print("Ex7 i) -->",text_match("ab"))
+print("Ex7 ii) -->",text_match("abc"))
+print("Ex7 iii) -->",text_match("aBc"))
 
+# 8 Write a Python program that takes any number of iterable objects or objects with a length property and returns the longest one.
+
+def longest_item(*args):
+  return max(args, key = len)
+ 
+print("Ex8 i) -->",longest_item('Red', 'Green', 'Black', 'Orange'))
+print("Ex8 ii) -->",longest_item([1, 2, 3], [1, 2, 3, 4], [1, 2, 3, 4, 5]))
+print("Ex8 iii) -->",longest_item([1, 2, 3], 'Java'))
+print("Ex8 iv) -->",longest_item({10, 100}, 'Python'))
