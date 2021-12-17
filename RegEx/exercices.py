@@ -61,6 +61,7 @@ patt = re.compile(r"\d\.\s+abc")
 ex_5 = patt.findall(ex5)
 print("Ex5 -->",ex_5)
 
+
 # 6 Write a Python program that matches a string that has an a followed by one or more b's.
 
 def text_match(text):
@@ -88,6 +89,7 @@ print("Ex7 i) -->",text_match("ab"))
 print("Ex7 ii) -->",text_match("abc"))
 print("Ex7 iii) -->",text_match("aBc"))
 
+
 # 8 Write a Python program that takes any number of iterable objects or objects with a length property and returns the longest one.
 
 def longest_item(*args):
@@ -97,6 +99,7 @@ print("Ex8 i) -->",longest_item('Red', 'Green', 'Black', 'Orange'))
 print("Ex8 ii) -->",longest_item([1, 2, 3], [1, 2, 3, 4], [1, 2, 3, 4, 5]))
 print("Ex8 iii) -->",longest_item([1, 2, 3], 'Java'))
 print("Ex8 iv) -->",longest_item({10, 100}, 'Python'))
+
 
 # 9 Write a Python program that matches a string that has an a followed by three 'b'.
 
@@ -109,4 +112,18 @@ def text_match(text):
                 return('Not matched!')
 
 print("Ex9 i) -->",text_match("abbb"))
-print("Ex9 i) -->",text_match("aabbbbbc"))
+print("Ex9 ii) -->",text_match("aabbbbbc"))
+
+
+
+# 10 Write a Python program that matches a string that has an a followed by two to three 'b'.
+
+import re
+def text_match(text):
+        patterns = 'ab{2,3}'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+print("Ex10 i) -->",text_match("ab"))
+print("Ex10 ii) -->",text_match("aabbbbbc"))
