@@ -127,3 +127,18 @@ def text_match(text):
                 return('Not matched!')
 print("Ex10 i) -->",text_match("ab"))
 print("Ex10 ii) -->",text_match("aabbbbbc"))
+
+
+# 11 Write a Python program that matches a string that has an a followed by two to three 'b'.
+
+import re
+def text_match(text):
+        patterns = '^[a-z]+_[a-z]+$'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+print("Ex11 i) -->",text_match("aab_cbbbc"))
+print("Ex11 ii) -->",text_match("aab_Abbbc"))
+print("Ex11 iii) -->",text_match("Aaab_abbbc"))
