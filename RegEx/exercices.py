@@ -103,7 +103,6 @@ print("Ex8 iv) -->",longest_item({10, 100}, 'Python'))
 
 # 9 Write a Python program that matches a string that has an a followed by three 'b'.
 
-import re
 def text_match(text):
         patterns = 'ab{3}?'
         if re.search(patterns,  text):
@@ -118,7 +117,6 @@ print("Ex9 ii) -->",text_match("aabbbbbc"))
 
 # 10 Write a Python program that matches a string that has an a followed by two to three 'b'.
 
-import re
 def text_match(text):
         patterns = 'ab{2,3}'
         if re.search(patterns,  text):
@@ -131,7 +129,6 @@ print("Ex10 ii) -->",text_match("aabbbbbc"))
 
 # 11 Write a Python program that matches a string that has an a followed by two to three 'b'.
 
-import re
 def text_match(text):
         patterns = '^[a-z]+_[a-z]+$'
         if re.search(patterns,  text):
@@ -142,3 +139,18 @@ def text_match(text):
 print("Ex11 i) -->",text_match("aab_cbbbc"))
 print("Ex11 ii) -->",text_match("aab_Abbbc"))
 print("Ex11 iii) -->",text_match("Aaab_abbbc"))
+
+# 12 Write a Python program to find the sequences of one upper case letter followed by lower case letters.
+
+def text_match(text):
+        patterns = '[A-Z]+[a-z]+$'
+        if re.search(patterns, text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+print(text_match("AaBbGg"))
+print(text_match("Python"))
+print(text_match("python"))
+print(text_match("PYTHON"))
+print(text_match("aA"))
+print(text_match("Aa"))
