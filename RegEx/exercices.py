@@ -148,9 +148,23 @@ def text_match(text):
                 return 'Found a match!'
         else:
                 return('Not matched!')
-print(text_match("AaBbGg"))
-print(text_match("Python"))
-print(text_match("python"))
-print(text_match("PYTHON"))
-print(text_match("aA"))
-print(text_match("Aa"))
+print("Ex12 i) -->",text_match("AaBbGg"))
+print("Ex12 ii) -->",text_match("Python"))
+print("Ex12 iii) -->",text_match("python"))
+print("Ex12 iv) -->",text_match("PYTHON"))
+print("Ex12 v) -->",text_match("aA"))
+print("Ex12 vi) -->",text_match("Aa"))
+
+
+# 13 Write a Python program that matches a string that has an 'a' followed by anything, ending in 'b'.
+
+def text_match(text):
+        patterns = 'a.*?b$'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+print("Ex13 i) -->",text_match("aabbbbd"))
+print("Ex13 ii) -->",text_match("aabAbbbc"))
+print("Ex13 iii) -->",text_match("accddbbjjjb"))
