@@ -168,3 +168,16 @@ def text_match(text):
 print("Ex13 i) -->",text_match("aabbbbd"))
 print("Ex13 ii) -->",text_match("aabAbbbc"))
 print("Ex13 iii) -->",text_match("accddbbjjjb"))
+
+
+# 14 Write a Python program that matches a word at the beginning of a string.
+
+def text_match(text):
+        patterns = '^\w+'
+        if re.search(patterns,  text):
+                return 'Found a match!'
+        else:
+                return('Not matched!')
+
+print("Ex14 i) -->",text_match("The quick brown fox jumps over the lazy dog."))
+print("Ex14 ii) -->",text_match(" The quick brown fox jumps over the lazy dog."))
