@@ -42,4 +42,4 @@ print(x)
 # Output: ['The', 'rain in Spain']
 ```
 
-<!-- https://www.w3resource.com/python-exercises/re/ 11 -->
+<!-- https://www.w3resource.com/python-exercises/re/ 12 -->
