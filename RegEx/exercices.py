@@ -192,14 +192,18 @@ def text_match(text):
         else:
                 return('Not matched!')
 
-import re
+print("Ex15 i) -->",text_match("The quick brown fox jumps over the lazy dog."))
+print("Ex15 ii) -->",text_match("The quick brown fox jumps over the lazy dog. "))
+
+
+# 16 Write a Python program that matches a word containing 'z'.
+
 def text_match(text):
-        patterns = '\w+\S*$'
+        patterns = '\w*z.\w*'
         if re.search(patterns,  text):
                 return 'Found a match!'
         else:
                 return('Not matched!')
 
-print("Ex15 i) -->",text_match("The quick brown fox jumps over the lazy dog."))
-print("Ex15 ii) -->",text_match("The quick brown fox jumps over the lazy dog. "))
-print("Ex15 iii) -->",text_match("The quick brown fox jumps over the lazy dog "))
+print("Ex16 i) -->",text_match("The quick brown fox jumps over the lazy dog."))
+print("Ex16 ii) -->",text_match("Python Exercises."))
